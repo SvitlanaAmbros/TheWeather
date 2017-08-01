@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">TheWeather</string>
+    <string name="open_drawer">Open drawer</string>
+    <string name="close_drawer">Close drawer</string>
+    <string name="navigation_drawer_header_title">Title</string>
 </resources>
