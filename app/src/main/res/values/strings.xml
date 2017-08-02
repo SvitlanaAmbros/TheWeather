@@ -3,4 +3,6 @@
     <string name="open_drawer">Open drawer</string>
     <string name="close_drawer">Close drawer</string>
     <string name="navigation_drawer_header_title">Title</string>
+    <string name="navdrawer_header_title">Weather forecast</string>
+    <string name="navdrawer_header_str">You should know it</string>
 </resources>
