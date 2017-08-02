@@ -1,4 +1,4 @@
-package com.example.admin.theweather.Adapters;
+package com.example.admin.theweather;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -13,7 +13,6 @@ import android.widget.Toast;
 
 
 import com.example.admin.theweather.Data.Item;
-import com.example.admin.theweather.R;
 
 import java.util.ArrayList;
 
