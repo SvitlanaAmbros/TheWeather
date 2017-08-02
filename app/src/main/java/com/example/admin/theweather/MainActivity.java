@@ -7,6 +7,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.ListView;
+
+import com.example.admin.theweather.Adapters.MenuAdapter;
+import com.example.admin.theweather.Data.Item;
+
+import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -18,8 +24,8 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.drawer_layout)
     DrawerLayout drawerLayout;
 
-    @BindView(R.id.navigation_view)
-    NavigationView menu;
+    @BindView(R.id.left_drawer)
+    ListView leftDrawerMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
         createActionBar();
         setActionBarDrawerToggle();
+        createNavigationDrawer();
 
     }
 
@@ -58,4 +65,12 @@ public class MainActivity extends AppCompatActivity {
         //calling sync state is necessary or else your hamburger icon wont show up
         actionBarDrawerToggle.syncState();
     }
+
+    public void createNavigationDrawer(){
+        MenuAdapter menuAdapter = new MenuAdapter(this, new MenuCreator().createMenu());
+
+        leftDrawerMenu.setAdapter(menuAdapter);
+    }
+
+
 }
