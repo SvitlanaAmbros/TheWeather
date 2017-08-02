@@ -24,10 +24,12 @@
         android:fitsSystemWindows="true"
         tools:openDrawer="start">
 
-        <include
-            layout="@layout/inform_by_item_menu"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:id="@+id/frame_with_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        </FrameLayout>
 
         <ListView
             android:id="@+id/left_drawer"
@@ -35,7 +37,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="start"
             android:choiceMode="singleChoice"
-            android:background="@color/colorPrimaryLight"
+            android:background="@color/colorIcons"
             android:divider="@android:color/darker_gray"
             android:dividerHeight="1dp" />
     </android.support.v4.widget.DrawerLayout>

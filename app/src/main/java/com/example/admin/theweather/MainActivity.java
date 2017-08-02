@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.example.admin.theweather.Adapters.MenuAdapter;
+import com.example.admin.theweather.MenuAdapter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
