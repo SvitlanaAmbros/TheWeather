@@ -4,10 +4,12 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.example.admin.theweather.Data.Item;
@@ -15,21 +17,33 @@ import com.example.admin.theweather.R;
 
 import java.util.ArrayList;
 
+import static android.R.attr.color;
+import static android.R.attr.content;
 import static android.R.attr.data;
 
 /**
  * Created by Admin on 02.08.2017.
  */
 
-public class MenuAdapter extends BaseAdapter {
+public class MenuAdapter extends BaseAdapter implements AdapterView.OnItemClickListener {
     private Context context;
     private LayoutInflater layoutInflater;
     private ArrayList<Item> itemsList;
+    private Integer choosingPosition = 0;
 
     public MenuAdapter(Context context, ArrayList<Item> itemList) {
         this.context = context;
         this.itemsList = itemList;
         layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        ViewHolder viewHolder = (ViewHolder) view.getTag();
+
+        choosingPosition = position;
+        Toast.makeText(context, "" + position, Toast.LENGTH_LONG).show();
+        notifyDataSetChanged();
     }
 
     static class ViewHolder {
@@ -64,10 +78,10 @@ public class MenuAdapter extends BaseAdapter {
             viewHolder = new ViewHolder();
 
             viewHolder.iconItem = (ImageView) view.findViewById(R.id.icon_item);
-            viewHolder.textItem = (TextView)view.findViewById(R.id.text_item);
+            viewHolder.textItem = (TextView) view.findViewById(R.id.text_item);
 
             view.setTag(viewHolder);
-        }else {
+        } else {
             viewHolder = (ViewHolder) view.getTag();
         }
 
@@ -75,6 +89,13 @@ public class MenuAdapter extends BaseAdapter {
         viewHolder.iconItem.setImageResource(item.getIcon());
         viewHolder.textItem.setText(item.getTitle());
 
+        if(choosingPosition.equals(position)) {
+            viewHolder.textItem.setTextColor(context.getResources().getColor(R.color.colorAccent));
+        }else {
+            viewHolder.textItem.setTextColor(context.getResources().getColor(R.color.colorPrimaryText));
+        }
+
         return view;
     }
+
 }
