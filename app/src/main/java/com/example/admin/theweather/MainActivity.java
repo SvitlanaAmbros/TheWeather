@@ -6,15 +6,17 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
-import com.example.admin.theweather.MenuAdapter;
+import com.example.admin.theweather.adapters.MenuAdapter;
+
+import com.example.admin.theweather.listeners.OnItemChoosingListener;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity implements OnItemChoosingListener {
     @BindView(R.id.main_toolbar)
     Toolbar mainToolbar;
 
@@ -64,10 +66,25 @@ public class MainActivity extends AppCompatActivity{
     }
 
     public void createNavigationDrawer(){
-        MenuAdapter menuAdapter = new MenuAdapter(this, new MenuCreator().createMenu());
+        MenuAdapter menuAdapter = new MenuAdapter(this, new MenuCreator().createMenu(),this);
 
         leftDrawerMenu.setAdapter(menuAdapter);
         leftDrawerMenu.setOnItemClickListener(menuAdapter);
     }
 
+
+    @Override
+    public void onItemChoose(int position) {
+        Toast.makeText(this, "position " + position, Toast.LENGTH_SHORT).show();
+        switch (position){
+            case 0:
+                break;
+            case 1:
+                break;
+            case 2:
+                break;
+            default:
+                break;
+        }
+    }
 }

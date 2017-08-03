@@ -4,6 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.admin.theweather.UserWelcome">
+    tools:context="com.example.admin.theweather.activities.UserWelcome">
 
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="143dp"
+        tools:layout_editor_absoluteY="100dp" />
 </android.support.constraint.ConstraintLayout>

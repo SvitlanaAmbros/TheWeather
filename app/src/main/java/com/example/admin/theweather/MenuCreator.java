@@ -1,7 +1,5 @@
 package com.example.admin.theweather;
 
-import com.example.admin.theweather.Data.Item;
-
 import java.util.ArrayList;
 
 /**

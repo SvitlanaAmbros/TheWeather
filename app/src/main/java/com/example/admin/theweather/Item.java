@@ -1,4 +1,4 @@
-package com.example.admin.theweather.Data;
+package com.example.admin.theweather;
 
 /**
  * Created by Admin on 02.08.2017.
