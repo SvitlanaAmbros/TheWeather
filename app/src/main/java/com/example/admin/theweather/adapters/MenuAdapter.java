@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
-import com.example.admin.theweather.Item;
+import com.example.admin.theweather.data.Item;
 import com.example.admin.theweather.R;
 import com.example.admin.theweather.listeners.OnItemChoosingListener;
 
@@ -87,9 +87,9 @@ public class MenuAdapter extends BaseAdapter implements AdapterView.OnItemClickL
         viewHolder.textItem.setText(item.getTitle());
 
         if(choosingPosition.equals(position)) {
-            viewHolder.textItem.setTextColor(context.getResources().getColor(R.color.colorAccent));
+            viewHolder.textItem.setTextColor(context.getResources().getColor(R.color.colorPrimaryDark));
         }else {
-            viewHolder.textItem.setTextColor(context.getResources().getColor(R.color.colorPrimaryText));
+            viewHolder.textItem.setTextColor(context.getResources().getColor(R.color.colorIcons));
         }
 
         return view;

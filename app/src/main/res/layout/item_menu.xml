@@ -20,5 +20,6 @@
         android:text="TextView"
         android:gravity="center_vertical"
         android:padding="@dimen/item_padding"
+        android:textColor="@color/colorIcons"
         style="@style/NavDrawerItemStyle"/>
 </LinearLayout>

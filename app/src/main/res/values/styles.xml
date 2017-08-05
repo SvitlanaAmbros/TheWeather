@@ -10,7 +10,7 @@
 
     <!--Style for item in navigation drawer-->
     <style name="NavDrawerItemStyle" parent="Base.TextAppearance.AppCompat">
-        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:textColor">@color/colorIcons</item>
         <item name="android:textSize">26sp</item>
         <item name="android:textStyle">bold|italic</item>
     </style>
