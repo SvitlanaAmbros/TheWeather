@@ -7,7 +7,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#7000">
+        android:background="#3000">
 
         <TextView
             android:id="@+id/textView"
@@ -16,7 +16,7 @@
             android:layout_margin="@dimen/welcome_title_margin"
             android:gravity="center"
             android:text="@string/welcome_fragment_title"
-            android:textColor="@color/colorTitleWelcome"
+            android:textColor="@color/colorPrimaryLight"
             android:textSize="34sp"
             android:textStyle="bold"/>
 

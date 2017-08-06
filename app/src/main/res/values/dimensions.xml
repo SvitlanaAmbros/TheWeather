@@ -5,4 +5,6 @@
     <dimen name="welcome_text_margin">25dp</dimen>
     <dimen name="welcome_text_padding">25dp</dimen>
     <dimen name="welcome_text_size">25dp</dimen>
+    <dimen name="fab_margins">16dp</dimen>
+    <dimen name="item_city_margin">10dp</dimen>
 </resources>

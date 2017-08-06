@@ -26,6 +26,18 @@ public class ListCreator {
         list.add("France");
         list.add("Kiev");
         list.add("New York");
+        list.add("London");
+        list.add("France");
+        list.add("Kiev");
+        list.add("New York");
+        list.add("London");
+        list.add("France");
+        list.add("Kiev");
+        list.add("New York");
+        list.add("London");
+        list.add("France");
+        list.add("Kiev");
+        list.add("New York");
 
         return list;
     }

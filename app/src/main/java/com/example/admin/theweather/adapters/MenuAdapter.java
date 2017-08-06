@@ -16,6 +16,9 @@ import com.example.admin.theweather.listeners.OnItemChoosingListener;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 /**
  * Created by Admin on 02.08.2017.
  */
@@ -44,10 +47,15 @@ public class MenuAdapter extends BaseAdapter implements AdapterView.OnItemClickL
     }
 
     static class ViewHolder {
+        @BindView(R.id.icon_item)
         ImageView iconItem;
+        @BindView(R.id.text_item)
         TextView textItem;
-    }
 
+        public ViewHolder(View view){
+            ButterKnife.bind(this, view);
+        }
+    }
 
     @Override
     public int getCount() {
@@ -72,11 +80,7 @@ public class MenuAdapter extends BaseAdapter implements AdapterView.OnItemClickL
         if (view == null) {
             view = layoutInflater.inflate(R.layout.item_menu, parent, false);
 
-            viewHolder = new ViewHolder();
-
-            viewHolder.iconItem = (ImageView) view.findViewById(R.id.icon_item);
-            viewHolder.textItem = (TextView) view.findViewById(R.id.text_item);
-
+            viewHolder = new ViewHolder(view);
             view.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) view.getTag();
