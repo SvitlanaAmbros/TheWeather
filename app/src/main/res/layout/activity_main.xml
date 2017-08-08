@@ -24,30 +24,22 @@
         android:fitsSystemWindows="true"
         tools:openDrawer="start">
 
-        <include
-            layout="@layout/inform_by_item_menu"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:id="@+id/frame_with_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        </FrameLayout>
 
-        <!--<android.support.v7.widget.RecyclerView-->
-            <!--android:id="@+id/RecyclerView"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:background="#7000"-->
-            <!--android:layout_gravity="left"-->
-            <!--android:scrollbars="vertical">-->
-
-        <android.support.design.widget.NavigationView
-            android:id="@+id/navigation_view"
-            android:layout_width="wrap_content"
+        <ListView
+            android:id="@+id/left_drawer"
+            android:layout_width="240dp"
             android:layout_height="match_parent"
             android:layout_gravity="start"
-            android:fitsSystemWindows="true"
-            app:headerLayout="@layout/header_for_navigation_drawer"
-            app:itemTextAppearance="@style/NavDrawerItemStyle"
-            app:menu="@layout/menu_for_navigation_drawer"/>
-        <!--</android.support.v7.widget.RecyclerView>-->
-
+            android:choiceMode="singleChoice"
+            android:background="@color/colorPrimaryText"
+            android:divider="@color/colorDivider"
+            android:dividerHeight="1dp" />
     </android.support.v4.widget.DrawerLayout>
 
 </LinearLayout>

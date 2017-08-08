@@ -1,8 +1,18 @@
 <resources>
-    <string name="app_name">TheWeather</string>
+    <string name="app_name">The Weather</string>
     <string name="open_drawer">Open drawer</string>
     <string name="close_drawer">Close drawer</string>
     <string name="navigation_drawer_header_title">Title</string>
-    <string name="navdrawer_header_title">Weather forecast</string>
-    <string name="navdrawer_header_str">You should know it</string>
+    <string name="welcome_fragment_title">CURRENT WEATHER AND FORECASTS IN YOUR CITY</string>
+    <string name="welcome_fragment_text">
+        \tThis application allows you to stay informed all time.\n
+        \tYou can trace necessary weather forecast in different city.\n
+        \tJust keep in touch with us. </string>
+    <string name="error">Error!</string>
+    <string name="error_message">Please, check Internet connection and try again.</string>
+    <string name="wifi_connection">WIFI is connected</string>
+    <string name="internet_connection">Interned is connected</string>
+    <string name="no_internet_connection">No Internet connection</string>
+    <string name="city">LONDON</string>
+    <string name="day">Wednesday</string>
 </resources>
