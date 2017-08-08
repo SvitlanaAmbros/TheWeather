@@ -79,7 +79,6 @@ public class MainActivity extends AppCompatActivity implements OnItemChoosingLis
 
         actionBarDrawerToggle.setDrawerIndicatorEnabled(true);
         drawerLayout.setDrawerListener(actionBarDrawerToggle);
-        //calling sync state is necessary or else your hamburger icon wont show up
         actionBarDrawerToggle.syncState();
     }
 
